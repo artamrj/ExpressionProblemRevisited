@@ -10,7 +10,7 @@ export class TextPost<C extends Post<C>> implements Post<C> {
     }
 
     display(): void {
-        console.log(this.content);
+        console.log("\x1b[32m%s\x1b[0m", `POST: ${this.content}`);
     }
 }
 
@@ -24,7 +24,7 @@ export class CombinedPost<C extends Post<C>> implements Post<C> {
     }
 
     display(): void {
-        console.log("Combined Post:");
+        console.log("\x1b[31m%s\x1b[0m", "COMBINED:");
         this.post1.display();
         this.post2.display();
     }
