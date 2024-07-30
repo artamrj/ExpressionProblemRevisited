@@ -1,0 +1,64 @@
+# Node.js and TypeScript
+
+# Ignore node_modules directory (common for Node.js projects)
+node_modules/
+
+# Ignore built files (common output directory for TypeScript)
+dist/
+build/
+
+# Ignore TypeScript definition files, if generated
+*.d.ts
+
+# Ignore TypeScript build cache
+*.tsbuildinfo
+
+# Ignore output logs
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# Ignore environment variables file
+.env
+
+# LaTeX
+
+# Ignore output files from LaTeX compilation
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# Ignore backup files
+*.bak
+*.backup
+*.rel
+
+# Editor-specific and other files
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+# VS Code
+.vscode/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# General backup and temporary files
+*~
+*.tmp
+.DS_Store
+
+# Directories from your initial gitignore
+/shelf/
+/workspace.xml
+
+# HTTP Client requests
+/httpRequests/
