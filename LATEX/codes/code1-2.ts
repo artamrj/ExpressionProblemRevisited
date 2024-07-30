@@ -15,7 +15,8 @@ class TextPost<C extends IPost<C>> implements IPost<C> {
 }
 
 class CombinePost<C extends IPost<C>> implements IPost<C> {
-    post1, post2: IPost<any>;
+    post1: IPost<any>;
+    post2: IPost<any>;
 
     constructor(post1: IPost<any>, post2: IPost<any>) {
         this.post1 = post1;

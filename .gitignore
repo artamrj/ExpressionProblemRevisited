@@ -1,3 +1,6 @@
+# Ignore all JavaScript files
+*.js
+
 # Node.js and TypeScript
 
 # Ignore node_modules directory (common for Node.js projects)
