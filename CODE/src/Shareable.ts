@@ -13,7 +13,7 @@ export class ShareableTextPost<C extends Shareable<C>> extends TextPost<C> imple
 export class ShareableCombinedPost<C extends Shareable<C>> extends CombinedPost<C> implements Shareable<C> {
     share(): void {
         console.log("\x1b[35m%s\x1b[0m", "SHARED COMBINED:");
-        this.post1.display();
-        this.post2.display();
+        (this.post1 as Shareable<any>).share();
+        (this.post2 as Shareable<any>).share();
     }
 }
