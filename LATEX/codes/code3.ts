@@ -2,18 +2,18 @@ interface IShareable<C extends IShareable<C>> extends IPost<C> {
     share(): void;
 }
 
-class ShareableTextPost<C extends IShareable<C>> 
+export class ShareableTextPost<C extends IShareable<C>> 
 extends TextPost<C> implements IShareable<C> {
     share(): void {
-        console.log("Sharing text post: " + this.content);
+        console.log("SHARED POST: " + this.content);
     }
 }
 
-class ShareableCombinePost<C extends IShareable<C>> 
-extends CombinePost<C> implements IShareable<C> {
+export class ShareableCombinedPost<C 
+extends IShareable<C>> extends CombinedPost<C> implements IShareable<C> {
     share(): void {
-        console.log("Sharing combined post:");
-        this.post1.display();
-        this.post2.display();
+        console.log("\x1b[35m%s\x1b[0m", "SHARED COMBINED:");
+        (this.post1 as IShareable<any>).share();
+        (this.post2 as IShareable<any>).share();
     }
 }

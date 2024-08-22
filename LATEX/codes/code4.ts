@@ -1,15 +1,15 @@
 interface IShareablePostFix extends IShareable<IShareablePostFix> {}
 
-class ShareableTextPostFix extends ShareableTextPost<IShareablePostFix> 
+export class ShareableTextPostFix extends ShareableTextPost<IShareablePostFix> 
 implements IShareablePostFix {
     constructor(content: string) {
         super(content);
     }
 }
 
-class ShareableCombinePostFix extends ShareableCombinePost<IShareablePostFix> 
+export class ShareableCombinedPostFix extends ShareableCombinedPost<IShareablePostFix> 
 implements IShareablePostFix {
-    constructor(post1: IPost<any>, post2: IPost<any>) {
+    constructor(post1: Post<any>, post2: Post<any>) {
         super(post1, post2);
     }
 }
